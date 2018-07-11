@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_contract_participation_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Contract participation
+  <% end %>
+  <h1>Listing contract_participations</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Contract</th>
+            <th>User</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @contract_participations.each do |contract_participation| %>
+        <%= content_tag :tr, id: dom_id(contract_participation), class: dom_class(contract_participation) do %>
+                      <td><%= contract_participation.contract %></td>
+                      <td><%= contract_participation.user %></td>
+                    <td><%= link_to 'Show', contract_participation %></td>
+          <td><%= link_to 'Edit', edit_contract_participation_path(contract_participation) %></td>
+          <td><%= link_to 'Destroy', contract_participation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

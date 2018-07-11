@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contract event:</strong>
+  <%= @contract_event_alert.contract_event %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @contract_event_alert.titulo %>
+</p>
+
+<p>
+  <strong>Modified at:</strong>
+  <%= @contract_event_alert.modified_at %>
+</p>
+
+<%= link_to 'Edit', edit_contract_event_alert_path(@contract_event_alert) %> |
+<%= link_to 'Back', contract_event_alerts_path %>

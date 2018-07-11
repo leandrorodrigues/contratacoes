@@ -1,0 +1,2 @@
+module ContractEventAlertsHelper
+end

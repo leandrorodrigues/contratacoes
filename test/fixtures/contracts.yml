@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  process_number: 1
+  year: 1
+  description: MyText
+  supplies: one
+  user_owner: one
+  user: one
+
+two:
+  title: MyString
+  process_number: 1
+  year: 1
+  description: MyText
+  supplies: two
+  user_owner: two
+  user: two

@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to contracts_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_contract_path(@contract), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show contract</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @contract.title %></dd>
+
+  <dt>Process number:</dt>
+  <dd><%= @contract.process_number %></dd>
+
+  <dt>Year:</dt>
+  <dd><%= @contract.year %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @contract.description %></dd>
+
+  <dt>Supplies:</dt>
+  <dd><%= @contract.supplies %></dd>
+
+  <dt>User owner:</dt>
+  <dd><%= @contract.user_owner %></dd>
+
+  <dt>User:</dt>
+  <dd><%= @contract.user %></dd>
+
+</dl>

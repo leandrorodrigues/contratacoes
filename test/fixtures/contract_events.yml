@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contract: one
+  title: MyString
+  modified_at: 2018-07-11 14:15:37
+
+two:
+  contract: two
+  title: MyString
+  modified_at: 2018-07-11 14:15:37
