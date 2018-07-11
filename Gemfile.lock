@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/decioferreira/bootstrap-generators.git
+  remote: /home/leandro/Web/bootstrap-generators
   revision: c3b255d1bd4128f6338020234f5a5c48d017827b
   specs:
     bootstrap-generators (3.3.4)
