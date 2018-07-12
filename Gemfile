@@ -10,7 +10,9 @@ gem 'rails', '~> 5.2.0'
 #
 gem 'mysql2'
 
-gem 'bootstrap-generators', git: '/home/leandro/Web/bootstrap-generators'
+gem 'bootstrap', '~> 4.1.1'
+gem 'font-awesome-rails'
+gem 'bootstrap-generators', :path =>  '/home/leandro/Web/bootstrap-generators'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

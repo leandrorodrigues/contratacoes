@@ -116,3 +116,1911 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:30:33 -0300
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 3068ms (Views: 3024.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 16:30:41 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (27.6ms)
+  Rendered users/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 93ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-11 16:30:46 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U58/l3IOVnAQ8JJv8ut8eXMAZEOZbRnzGQ6+NQRR64ESz/h8yUntueolmbvsN+F5rDIP8/zWuYCO29BKfyLf5A==", "user"=>{"name"=>"teste", "username"=>"teste", "password"=>"[FILTERED]", "modified_at(1i)"=>"2018", "modified_at(2i)"=>"7", "modified_at(3i)"=>"11", "modified_at(4i)"=>"19", "modified_at(5i)"=>"30"}, "commit"=>"Create User"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `password`, `created_at`, `modified_at`) VALUES ('teste', 'teste', 'teste', '2018-07-11 19:30:46', '2018-07-11 19:30:00')[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 26ms (ActiveRecord: 22.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-07-11 16:30:46 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 46ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:30:49 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-11 16:56:35 -0300
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:56:39 -0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:42:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:57:14 -0300
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:57:17 -0300
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:57:17 -0300
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:57:17 -0300
+  [1m[35m (5.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:57:17 -0300
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:57:17 -0300
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:58:25 -0300
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ApplicationRecord):
+  
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 16:59:37 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 50ms (Views: 43.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:02:40 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:02:41 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:02:41 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:02:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:02:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:02:47 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:02:47 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:03:04 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:03:06 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:03:07 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:03:07 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:03:07 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:03:21 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:09:46 -0300
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:09:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:31:34 -0300
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.scss.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__471244752784224458_70242397929560'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:34:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.scss.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__471244752784224458_70242407207880'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:34:45 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.scss.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__471244752784224458_70242398569680'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:34:49 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.scss.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__471244752784224458_70242407565800'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:34:49 -0300
+  [1m[35m (5.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.scss.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__471244752784224458_70242399153280'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:34:49 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.scss.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/bundler/gems/bootstrap-generators-c3b255d1bd41/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__471244752784224458_70242409676140'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:35:03 -0300
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (10.0ms)
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:35:05 -0300
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 3676ms (Views: 3673.5ms | ActiveRecord: 2.1ms)
+
+
+Completed 200 OK in 5417ms (Views: 5388.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:35:11 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:40:00 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/fonts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/Web/bootstrap-generators/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___2443518829049264865_70143324114500'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:40:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/fonts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/Web/bootstrap-generators/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___2443518829049264865_70143321062480'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:40:16 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/fonts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/Web/bootstrap-generators/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/bootstrap-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___2443518829049264865_70143495338220'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:41:49 -0300
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/fonts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/Web/bootstrap-generators/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/bootstrap-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__55391564013309405_47329791685080'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:45:27 -0300
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 5474ms (Views: 5451.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:47:04 -0300
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/fonts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/Web/bootstrap-generators/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/bootstrap-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1449910818536145681_47124477709080'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:48:31 -0300
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/fonts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/Web/bootstrap-generators/vendor/twitter/bootstrap/sass
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/bootstrap-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1449910818536145681_70172805626160'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:48:41 -0300
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 4610ms (Views: 4586.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:49:52 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:49:52 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:50:15 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:53:53 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 434ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/fonts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__2407193389098549591_70081638260600'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 17:59:46 -0300
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 1067ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1062258633419078982_47134171010760'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:00:27 -0300
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 1113ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1947971544026608958_47373251999400'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:00:28 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1947971544026608958_69845481350340'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:00:31 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1947971544026608958_69845474987240'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:00:31 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1947971544026608958_69845479714160'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:00:32 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1947971544026608958_69845482436120'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:00:59 -0300
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___137108169840696986_47380772369980'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:00:59 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: fontawesome.
+Load paths:
+  /home/leandro/Web/contratacoes/app/assets/config
+  /home/leandro/Web/contratacoes/app/assets/images
+  /home/leandro/Web/contratacoes/app/assets/javascripts
+  /home/leandro/Web/contratacoes/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/leandro/Web/contratacoes/node_modules
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/popper_js-1.12.9/assets/javascripts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/javascripts
+  /home/leandro/Web/bootstrap-generators/vendor/awesome/sass
+  /home/leandro/Web/contratacoes/app/assets/fonts
+  /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.1/assets/stylesheets):
+    13:     <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+    14:   <![endif]-->
+    15: 
+    16:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    17:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    18:   <%= csrf_meta_tags %>
+    19: </head>
+  
+app/assets/stylesheets/awesome-generators.scss:1
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___137108169840696986_70044288992520'
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:01:37 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5037ms (Views: 5035.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:03:33 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:24: syntax error, unexpected ',', expecting =>
+...retro", text: "Contratos", "#", class: "navbar-brand" );@out...
+...                              ^
+/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:30: syntax error, unexpected keyword_do_block, expecting keyword_end
+'.freeze;     flash.each do |name, msg| 
+                         ^~
+/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:30: syntax error, unexpected '|', expecting '='
+...;     flash.each do |name, msg| 
+...                              ^
+/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:43: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/layouts/application.html.erb:24: syntax error, unexpected ',', expecting =>
+app/views/layouts/application.html.erb:30: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/layouts/application.html.erb:30: syntax error, unexpected '|', expecting '='
+app/views/layouts/application.html.erb:43: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:04:24 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:24: syntax error, unexpected ',', expecting ')'
+...ink_to fa_icon ("camera-retro", text: "Contratos"), "#", cla...
+...                              ^
+/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:24: syntax error, unexpected tLABEL
+...text: "Contratos"), "#", class: "navbar-brand" );@output_buf...
+...                         ^~~~~~
+/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting keyword_end
+...), "#", class: "navbar-brand" );@output_buffer.safe_append='
+...                              ^):
+  
+app/views/layouts/application.html.erb:24: syntax error, unexpected ',', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected tLABEL
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting keyword_end
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:05:22 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:06:27 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1143ms (Views: 1141.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:09:14 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:24: syntax error, unexpected ',', expecting =>
+...ink_to  text: "Contratos", "#", class: "navbar-brand" );@out...
+...                              ^
+/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:30: syntax error, unexpected keyword_do_block, expecting keyword_end
+'.freeze;     flash.each do |name, msg| 
+                         ^~
+/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:30: syntax error, unexpected '|', expecting '='
+...;     flash.each do |name, msg| 
+...                              ^
+/home/leandro/Web/contratacoes/app/views/layouts/application.html.erb:43: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/layouts/application.html.erb:24: syntax error, unexpected ',', expecting =>
+app/views/layouts/application.html.erb:30: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/layouts/application.html.erb:30: syntax error, unexpected '|', expecting '='
+app/views/layouts/application.html.erb:43: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:09:35 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:09:42 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:10:39 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:10:39 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:13:05 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:13:13 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:15:55 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:19:11 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:19:17 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:19:19 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:19:24 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:24:18 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:24:22 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:24:23 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:24:23 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:26:00 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:26:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:26:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:26:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:26:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:26:07 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:26:08 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:26:08 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:27:17 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:27:18 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:27:18 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:27:18 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 2966ms (Views: 2963.7ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 4083ms (Views: 4079.4ms | ActiveRecord: 2.4ms)
+
+
+Completed 200 OK in 4030ms (Views: 4027.4ms | ActiveRecord: 1.5ms)
+
+
+Completed 200 OK in 3787ms (Views: 3782.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:28:44 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2093ms (Views: 2091.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:28:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:28:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:28:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:29:35 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 2182ms (Views: 2180.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:29:37 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:31:53 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:31:53 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:32:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:32:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 2106ms (Views: 2105.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:32:48 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 18:32:56 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (19.7ms)
+  Rendered users/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:32:59 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-07-11 18:33:00 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-11 18:33:02 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L6/+xQrg8lIpBD1t0nwjckSLY7Wr+QaQ2mOCVtyE6atu/zkusadJm9PRNrnMoL5ym7kIBc5CpuNNtuwpp/fdzg==", "user"=>{"name"=>"", "username"=>"", "password"=>"[FILTERED]", "modified_at(1i)"=>"2018", "modified_at(2i)"=>"7", "modified_at(3i)"=>"11", "modified_at(4i)"=>"21", "modified_at(5i)"=>"33"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `password`, `created_at`, `modified_at`) VALUES ('', '', '', '2018-07-11 21:33:02', '2018-07-11 21:33:00')[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 23ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-07-11 18:33:02 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:33:03 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:38:04 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:38:04 -0300
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/leandro/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 3097ms (Views: 3095.1ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 3022ms (Views: 3020.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:39:32 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:39:33 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:40:42 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:40:42 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:41:40 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 2184ms (Views: 2182.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:41:42 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:41:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:42:17 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:42:23 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:42:43 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:43:12 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 2111ms (Views: 2109.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:43:15 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:43:15 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:43:16 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:43:16 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:44:52 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 2095ms (Views: 2093.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:44:54 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:47:34 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-07-11 18:47:35 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.5ms)
+
+
